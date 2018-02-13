@@ -15,7 +15,7 @@ pub fn day_10(){
     for it in 0..my_input.len(){
         let x: &str = my_input[it].trim();
         let next_value : usize = x.parse().unwrap();
-        let clone = vec.clone();
+        let mut clone = vec.clone();
         vec = get_sub_split(clone, current_position, next_value);
         let next_current_pos = current_position + it + next_value;
         current_position = match next_current_pos {
@@ -28,7 +28,6 @@ pub fn day_10(){
     println!("Multiplication = {}", multiplication);
 }
 
-/*
 
 pub fn day_10b() {
     let inp = parse_utils::parse_input_file("inp10.txt");
@@ -75,7 +74,6 @@ pub fn day_10b() {
     sixteen.iter().for_each(|knot| print!("{:02x}", knot));
 
 }
-*/
 
 
 pub fn get_sub_split(mut vec: Vec<i32>, current_position: usize, length: usize) -> Vec<i32> {

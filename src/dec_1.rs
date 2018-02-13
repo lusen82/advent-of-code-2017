@@ -1,7 +1,8 @@
+
+
 use std::str::Chars;
 use std::io::Read;
 use super::parse_utils;
-
 pub fn day1()
 {
     println!("Result day 1: ");
@@ -86,85 +87,4 @@ mod tests {
         super::day1b();// 1072)
     }
 }
-//
-//
-//
-//pub fn day1()
-//{
-//    println!("Result day 1: ");
-//    day1a();
-//    day1b();
-//}
-//
-//
-//fn day1a()
-//{
-//    let inp = parse_input_file("inp.txt");
-//    let mut chars: Chars = inp.chars();
-//    let  first = chars.next();
-//    let mut numbers: Chars = chars.clone();
-//
-//    let lll = numbers.clone().count();
-//    let mut ff = numbers.next();
-//    let mut nr = chars.next();
-//    let mut sum: u32 = 0;
-//    while nr.is_some() {
-//        if ff.is_none()
-//            {
-//                if nr.unwrap() == first.unwrap() {
-//                    let nu = nr.unwrap().to_digit(10).unwrap();
-//                    sum = sum + nu;
-//                }
-//            } else if nr.unwrap() == ff.unwrap() {
-//            let nu = nr.unwrap().to_digit(10).unwrap();
-//            sum = sum + nu;
-//        }
-//        nr = chars.next();
-//        ff = numbers.next();
-//    }
-//
-//    println!("{}", sum);
-//}
-//
-//fn day1b()
-//{
-//    let inp = parse_input_file("inp.txt");
-//    let mut chars: Chars = inp.chars();
-//    let numbers: Chars = chars.clone();
-//
-//    let lll = numbers.clone().count();
-//    let mut nr = chars.next();
-//    let mut sum: u32 = 0;
-//    let mut iter: usize = 0;
-//    let mut siter: usize = 0;
-//    while nr.is_some() {
-//        let mut numm: Chars = numbers.clone();
-//        let ind = (iter + lll / 2) as usize;
-//        if ind >= lll
-//            {
-//                let rest = lll - iter;
-//                let index = siter;
-//                let char_comp: char = numm.nth(index).unwrap();
-//
-//                if nr.unwrap() == char_comp {
-//                    let nu = nr.unwrap().to_digit(10).unwrap();
-//                    sum = sum + nu;
-//                }
-//                //nr = chars.next();
-//                siter = siter + 1;
-//            } else {
-//            let char_comp: char = numm.nth(ind).unwrap();
-//
-//            if nr.unwrap() == char_comp {
-//                let nu = nr.unwrap().to_digit(10).unwrap();
-//                sum = sum + nu;
-//            }
-//        }
-//        nr = chars.next();
-//        iter = iter + 1;
-//    }
-//    println!("{}", sum);
-//}
-//
-
 

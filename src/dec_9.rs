@@ -10,13 +10,13 @@ pub fn day_9(){
     let inp = parse_utils::parse_input_file("inp9.txt");
     let stripped: String = remove_ignored_characters(&inp);
     let removed_garbage = count_all_garbage(stripped);
-    println!("Reslut 9 b = {}",removed_garbage );
+    println!("Reslut 9 = {}",removed_garbage );
 
     let stripped2: String = remove_ignored_characters(&inp);
 
     let all_garbage_removed = remove_all_garbage(stripped2);
     let find_groups = find_groups(all_garbage_removed);
-   println!("Reslut 9 a = {}",find_groups );
+   println!("Reslut 9 = {}",find_groups );
 }
 
 

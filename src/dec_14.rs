@@ -1,4 +1,3 @@
-/*
 extern crate regex;
 extern crate ascii;
 use std::io::Read;
@@ -177,4 +176,3 @@ mod tests {
     }
 
 }
-*/

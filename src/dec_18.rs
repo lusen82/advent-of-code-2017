@@ -53,7 +53,7 @@ pub fn day_18_b_impl(thread_tx: Sender<i64>, thread_rx: Receiver<i64>, id: i32)
 {
     let instruction_input = parse_utils::read_line_by_line("inp18.txt");
 
-    let queue: Vec<i64> = vec![];
+    let  mut queue: Vec<i64> = vec![];
     let mut value_map: HashMap<String, i64> = HashMap::new();
     value_map.insert("p".to_string(), id as i64);
     let mut it: i64 = 0;
@@ -288,7 +288,7 @@ pub fn day_18_a(){
 }
 
 fn operate(key: String, value_str: Option<&str>, mut value_map: HashMap<String, i64>,
-           cloned_value_map: &HashMap<String, i64>, operator: &Fn(i64, i64) -> i64) -> HashMap<String, i64> {
+           mut cloned_value_map: &HashMap<String, i64>, operator: &Fn(i64, i64) -> i64) -> HashMap<String, i64> {
 
     match value_str {
         Some(val) => {

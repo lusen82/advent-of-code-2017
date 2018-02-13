@@ -29,7 +29,7 @@ pub fn day_16(){
 
 pub fn day_16_b(){
 
-    let programs = "abcdefghijklmnop".to_string();
+    let mut programs = "abcdefghijklmnop".to_string();
 
     let instruction_input = parse_utils::parse_input_file("inp_16.txt");
 
