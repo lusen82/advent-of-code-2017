@@ -31,7 +31,7 @@ mod  parse_utils;
 
 fn main() {
     let all = false;
-    dec_23::day_23_b_test_2();
+    dec_3::day_3();
     //dec_18::day_18_b();
     if all {
    // dec_11::day11();
